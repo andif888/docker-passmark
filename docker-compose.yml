@@ -1,0 +1,11 @@
+version: '2'
+services:
+  passmark:
+    image: andif888/docker-passmark:latest
+    devices:
+      - "/dev/mem:/dev/mem"
+    cap_add:
+      - sys_rawio
+    ports:
+      - "80:80"
+      - "2222:2222"
